@@ -1,0 +1,4 @@
+username: acm21v7x306
+pwd: ojKc4J9bhpKSNUT2
+
+mongodb+srv://acm21v7x306:ojKc4J9bhpKSNUT2@cluster0.q9gbs3w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
