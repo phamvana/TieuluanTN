@@ -16,9 +16,12 @@ import uploadRoutes from "./routes/uploadRoutes.js";
 
 dotenv.config();
 
+// Kết nối cơ sở dữ liệu MongoDB từ config/db.js
 connectDB();
 
+// Sử dụng express
 const app = express();
+
 
 if (process.env.NODE_ENV === "development") {
     app.use(morgan("dev"));
@@ -29,7 +32,7 @@ app.use(express.json());
 //route chính
 
 app.get("/", (req, res) => {
-    res.send("API is on running...");
+    res.send("API is on running... | Trang web đã được thực thi ... ");
 });
 
 // Các route của chương trình
