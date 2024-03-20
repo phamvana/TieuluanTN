@@ -4,6 +4,8 @@
 + THỰC HIỆN: PHẠM VĂN Á MSSV: 
 + MSSV: CM21V7X306
 
+[Xem hướng dẫn chạy dự án](huongdan.md)
+
 ## CẬP NHẬT NHẬT KÝ THỰC HIỆN CODE
 ***
 
@@ -24,7 +26,6 @@ _server.js_
 + Đặt biến `app = express();`
 
 ***
-
 ## _19/3/2024 - Cập nhật file_
 
 - Tạo git respo

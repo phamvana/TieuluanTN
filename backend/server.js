@@ -23,45 +23,45 @@ dotenv.config(); // Sử dungh biến môi trường
 connectDB();
 
 // Sử dụng express
-const app = express();
+const studionhu = express();
 
-
-if (process.env.NODE_ENV === "developments") {
-    app.use(morgan("dev"));
+// sử dụng morgan
+if (process.env.NODE_ENV === "development") {
+    studionhu.use(morgan("dev"));
 }
 
-app.use(express.json());
+// Tạo Json
+studionhu.use(express.json());
 
 //route chính
-
-app.get("/", (req, res) => {
+studionhu.get("/", (req, res) => {
     res.send("API is on running... | Trang web đã được thực thi ... ");
 });
 
 // Các route của chương trình
-app.use("/api/products", productRoutes);
-app.use("/api/users", userRoutes);
-app.use("/api/orders", orderRoutes);
-app.use("/api/upload", uploadRoutes);
+studionhu.use("/api/products", productRoutes); //Sản phẩm
+studionhu.use("/api/users", userRoutes);       //người dùng
+studionhu.use("/api/orders", orderRoutes);     //đặt hàng
+studionhu.use("/api/upload", uploadRoutes);    //cập nhật
 
 // route thanh toán
-app.get("/api/config/paypal", (req, res) =>
+studionhu.get("/api/config/paypal", (req, res) =>
     res.send(process.env.PAYPAL_CLIENT_ID)
 );
 
 // đường dẫn 
 const __dirname = path.resolve();
-app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
+studionhu.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 // Không tìm thấy route
-app.use(notFound);
+studionhu.use(notFound);
 
 // Lỗi
-app.use(errorHandler);
+studionhu.use(errorHandler);
 
 // Port hoạt động của app. Sử dụng biến nôi trường hoặc giá tị biến 3300
 const PORT = process.env.PORT || 3300;
-app.listen(
+studionhu.listen(
     PORT,
     console.log(
         `Server is on running in ${process.env.NODE_ENV} on port ${PORT}`.yellow
