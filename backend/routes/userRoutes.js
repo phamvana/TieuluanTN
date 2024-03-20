@@ -1,4 +1,7 @@
 import express from "express";
+/**
+ * Thêm các controller
+ */
 import {
     authUser,
     registerUser,
@@ -9,6 +12,10 @@ import {
     getUserById,
     updateUser,
 } from "../controller/userController.js";
+ 
+/**
+  * Thêm các middleware
+  */
 import {
     protect,
     admin
@@ -16,6 +23,9 @@ import {
 
 const router = express.Router();
 
+/**
+ * Định nghĩa route
+ */
 router.route("/").post(registerUser).get(protect, admin, getUsers);
 router
     .route("/profile")

@@ -16,9 +16,35 @@
 
 **Nhật ký sẽ cập nhật theo ngày gần nhất, từ trên xuống dưới.**
 
-### _20/3/2024 - Tìm hiểu về biến môi trường_
+### _20/3/2024 - Tìm hiểu hoạt động của ruote_
 
-### Kết nối với dữ liệu MongoDB
+**File:** routes/productRoutes.js
+- Thêm thư viện express
+- Thêm các controller
+- Thêm middleware
+- Định nghĩa route
+  - 1. `router.route("/").get(getProducts)` phương thức GET lấy `controller getProducts`. Phương thức này trả về toàn bộ products của dữ liệu. Sẽ tìm hiểu phần này trong controller. url: http://localhost:5000/api/products (PORT có thể thay đổi tuỳ theo cài đặt)
+  - 2. `router.route("/").post(protect, admin, createProduct);` phương thức POST để tạo sản phẩm mới. Sử dụng `middleware protect, admin` và `controller createProduct`. Dùng Postman để kiểm tra
+  - 3. `router.route("/:id/reviews").post(protect, createProductReview);` phương thức POST, phương thức sử dụng `middleware protect`
+  - 4. `router.get("/top", getTopProducts);` phương thức GET lấy giá trị top từ `controller getTopProducts`. url: http://localhost:5000/api/products/top
+  - 5. Các route có tham số `id` của sản phẩm. Xem 1 sản phẩm của `id` đó, cập nhật hoặc xoá sản phẩm. Khi cập nhật hoặc xoá cần qua middleware.
+**File:** routes/orderRoutes.js
+- Thêm thư viện express
+- Thêm các `controller (addOrderItems, updateOrderToPaid, getOrderByID, getMyOrders, getOrders, updateOrderToDelivered)` từ `controller/orderController.js`
+-  Định nghĩa router
+**File:** routes/userRoutes.js
+- Thêm thư viện express
+- Thêm controller
+- Thêm middleware
+- Định nghĩa router
+**File:** routes/uploadtRoutes.js
+- Sử dụng biến `path`
+- Thêm thư viện express
+- Thêm thư viện multer **(Tìm hiểu về thư viện này)**
+- Phương thức Router của express
+- **(Tiêp tục tìm hiểu)**
+***
+### _20/3/2024 - Kết nối với dữ liệu MongoDB_
 
 **File:** `config/db.js`
 - Thêm thư viện mongoose. 
@@ -29,9 +55,13 @@
 - Cách kết nối MongoDB với tài khoản trên MongoDB Cloud như hình
 
 ![Hình 1](backend/config/1.jpg)
+***
 ![Hình 2](backend/config/2.jpg)
 
+- **Chú ý:** Kết nối không thành công thì xem lại biến môi trường, hoặc điều chỉnh IP của Cloud MongoDB. 
 ---
+### _20/3/2024 - Tìm hiểu về biến môi trường_
+
 - Khi sử sụng máy tính tại nhà để clone dữ liệu về thì app không chạy do lỗi biến môi trường không cập nhật được đường dẫn của MongoDB. Để nắm sâu hơn về biến môi trường tôi phải tự tìm hiểu.
 - 1. Tạo file .env lưu các biến cần thiết
 - 2. Cài đặt gói dotenv để chạy được biến môi trường.
@@ -68,7 +98,7 @@ _Tên file server.js_
   - 5. `studionhu.use(notFound);` khi không tìm thấy địa chỉ
   - 6. `studionhu.use(errorHandler);`
 - Ứng dụng khởi chạy sẽ lắng nghe cổng được cài đặt
-  - 1.  Biến PORT
+  - 1.  Biến PORT giá trị cổng chạy server
   - 2.  In ra màn hình console cổng và thông báo
 - Thực hiện kết nối với MongoDB bằng thư viện `mongoose`
   - 1.  Chạy hàm `connectDB();` để thực thi nội dung trong `./config/db.js`

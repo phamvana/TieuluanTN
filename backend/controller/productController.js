@@ -1,7 +1,7 @@
 import asyncHandler from "express-async-handler";
 import Product from "../models/productModel.js";
 
-//GET all products - Tất cả các route
+//GET all products - Tất cả các sản phẩm
 // GET /api/products
 const getProducts = asyncHandler(async (req, res) => {
   const pageSize = 8;
