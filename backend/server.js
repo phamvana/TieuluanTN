@@ -56,12 +56,12 @@ app.use(notFound);
 // Lỗi
 app.use(errorHandler);
 
-// Port hoạt động của app
-const PORT = process.env.PORT || 5000;
+// Port hoạt động của app. Sử dụng biến nôi trường hoặc giá tị biến 3300
+const PORT = process.env.PORT || 3300;
 app.listen(
     PORT,
     console.log(
         `Server is on running in ${process.env.NODE_ENV} on port ${PORT}`.yellow
             .bold
-    )
+    ),
 );
