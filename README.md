@@ -5,6 +5,9 @@
 - THỰC HIỆN: PHẠM VĂN Á MSSV:
 - MSSV: CM21V7X306
 
+---
+
+[Báo cáo Tiểu luận](https://docs.google.com/document/d/1pBuecpWnVnyw-nnBTALrKOULtWCm_6oPJgoiKN2oVRI/edit?usp=sharing)
 [Xem hướng dẫn chạy dự án](huongdan.md)
 
 ## CẬP NHẬT NHẬT KÝ THỰC HIỆN CODE
@@ -19,9 +22,9 @@
 - 3. Tham khảo thêm các tài liệu về dotenv
      [https://www.npmjs.com/package/dotenv]
 
-### Tìm hiểu Server.js
+### Tìm hiểu và cài đặt Server
 
-_server.js_
+_Tên file server.js_
 
 - Cập nhật các thư viện: path, express, dotenv, color
 - Thêm các file:
@@ -39,7 +42,7 @@ _server.js_
   - 5.  Paypal `/api/config/paypay`?
 - Tìm hiểu biến đường dẫn
   - 1. [video hướng dẫn](https://youtu.be/KBMx0ITKrGc)
-  - 2. [Tài liệu] (https://nodejs.org/api/path.html)
+  - 2. [Tài liệu](https://nodejs.org/api/path.html)
   - 3. Thực hiện các đường dẫn tĩnh của ứng dụng
 - Tìm hiểu middleware
   - 1.  [Tài liệu](https://viblo.asia/p/tim-hieu-ve-middleware-trong-expressjs-gVQelwaaGZJ)
