@@ -12,10 +12,20 @@
 - [Báo cáo Tiểu luận](https://docs.google.com/document/d/1pBuecpWnVnyw-nnBTALrKOULtWCm_6oPJgoiKN2oVRI/edit?usp=sharing)
 - [Xem hướng dẫn chạy dự án](huongdan.md)
 
-## CẬP NHẬT NHẬT KÝ THỰC HIỆN CODE
+## NHẬT KÝ THỰC HIỆN
 
 **Nhật ký sẽ cập nhật theo ngày gần nhất, từ trên xuống dưới.**
 
+### _21/3/2024 - Tiếp tục tìm hiểu hoạt động của rote_
+
+**File:** routes/orderRoutes.js
+- Thêm thư viện express
+- Thêm các `controller (addOrderItems, updateOrderToPaid, getOrderByID, getMyOrders, getOrders, updateOrderToDelivered)` từ `controller/orderController.js`
+-  Định nghĩa router
+  - 1. router `router.route("/").post(protect, addOrderItems).` phương thức POST, middleware protect, controller: addOrderItems thêm đặt hàng, 
+  - 2. router `router.route("/").get(protect, admin, getOrders)` phương thức POST, middleware: (protect, admin), controller: getOrders
+
+***
 ### _20/3/2024 - Tìm hiểu hoạt động của ruote_
 
 **File:** routes/productRoutes.js
@@ -28,7 +38,7 @@
   - 3. `router.route("/:id/reviews").post(protect, createProductReview);` phương thức POST, phương thức sử dụng `middleware protect`
   - 4. `router.get("/top", getTopProducts);` phương thức GET lấy giá trị top từ `controller getTopProducts`. url: http://localhost:5000/api/products/top
   - 5. Các route có tham số `id` của sản phẩm. Xem 1 sản phẩm của `id` đó, cập nhật hoặc xoá sản phẩm. Khi cập nhật hoặc xoá cần qua middleware.
-  ***
+***
 **File:** routes/orderRoutes.js
 - Thêm thư viện express
 - Thêm các `controller (addOrderItems, updateOrderToPaid, getOrderByID, getMyOrders, getOrders, updateOrderToDelivered)` từ `controller/orderController.js`
