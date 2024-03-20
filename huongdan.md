@@ -15,4 +15,4 @@
 - Chạy backend _npm start_
 - Kiểm tra dự án đã hoạt động chưa.
 
-  ![Chạy dự án](upload\image.png)
+  ![Chạy dự án](uploads/image.png)
