@@ -10,10 +10,11 @@
 
 ## Chạy dự án
 
-- Sau khi clone dự án, chuyển đến thư mục chứa dự án bằng lệnh _`cd TieuluanTN`_
+- Sau khi clone dự án, chuyển đến thư mục chứa dự án bằng lệnh `_cd TieuluanTN_`
 - Cài đặt các gói cho dự án `_npm i_`
 - Chạy backend `_npm start_`
 - Kiểm tra dự án đã hoạt động chưa.
 
   ![Chạy dự án](uploads/image.png)
+
   Hình thông báo đã chạy được dự án
