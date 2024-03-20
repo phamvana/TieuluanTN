@@ -1,7 +1,7 @@
 const notFound = (req, res, next) => {
     const error = new Error(`Not found | Không tìm thấy - ${req.originalUrl}`);
-    res.status(404);
-    next(error);
+    res.status(404); //trả về 404
+    next(error);     //Hàm lỗi được thực thi
 };
 
 const errorHandler = (err, req, res, next) => {

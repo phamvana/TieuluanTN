@@ -25,7 +25,10 @@ connectDB();
 // Sử dụng express
 const studionhu = express();
 
-// sử dụng morgan
+/*
+ * Công  cụ ghi logger trong quá trình phát triển ứng dụng
+ * pva cập nhật và cài đặt trong dev
+*/
 if (process.env.NODE_ENV === "development") {
     studionhu.use(morgan("dev"));
 }
@@ -56,11 +59,20 @@ studionhu.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 // Không tìm thấy route
 studionhu.use(notFound);
 
-// Lỗi
+// Lỗi khi đọc dữ liệu từ các route
 studionhu.use(errorHandler);
 
-// Port hoạt động của app. Sử dụng biến nôi trường hoặc giá tị biến 3300
+/*
+ * Port hoạt động của ứng dụng. 
+ * Sử dụng biến nôi trường hoặc giá trị biến 3300
+ *
+ */
 const PORT = process.env.PORT || 3300;
+/**
+ * Khi ứng dụng chạy sẽ lắng nghe ở cổng được cài đặt
+ * In ra màn hình console cổng đang hoạt động
+ * Định dạng màu và font đậm
+ */
 studionhu.listen(
     PORT,
     console.log(
