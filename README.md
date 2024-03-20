@@ -28,8 +28,8 @@
 - Xử lý ngoại lệ xác định ứng dụng có kết nối được hay không.
 - Cách kết nối MongoDB với tài khoản trên MongoDB Cloud như hình
 
-![ Hình 1 ](config/1.jpg)
-
+![Hình 1](backend/config/1.jpg)
+![Hình 2](backend/config/2.jpg)
 
 ---
 - Khi sử sụng máy tính tại nhà để clone dữ liệu về thì app không chạy do lỗi biến môi trường không cập nhật được đường dẫn của MongoDB. Để nắm sâu hơn về biến môi trường tôi phải tự tìm hiểu.
