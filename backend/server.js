@@ -17,11 +17,11 @@ import {
 import uploadRoutes from "./routes/uploadRoutes.js";
 
 // ---------------
-dotenv.config(); // Sử dungh biến môi trường
+dotenv.config(); // Sử dụng biến môi trường
 
 // Kết nối cơ sở dữ liệu MongoDB từ config/db.js
 connectDB();
-
+// console.log(connectDB().conn);
 // Sử dụng express
 const studionhu = express();
 
