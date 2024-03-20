@@ -2,7 +2,7 @@
 
 ## Đề tài: WEBSITE STUDIO NHƯ
 
-- THỰC HIỆN: PHẠM VĂN Á MSSV:
+- THỰC HIỆN: PHẠM VĂN Á
 - MSSV: CM21V7X306
 
 ---
@@ -28,15 +28,18 @@
   - 3. `router.route("/:id/reviews").post(protect, createProductReview);` phương thức POST, phương thức sử dụng `middleware protect`
   - 4. `router.get("/top", getTopProducts);` phương thức GET lấy giá trị top từ `controller getTopProducts`. url: http://localhost:5000/api/products/top
   - 5. Các route có tham số `id` của sản phẩm. Xem 1 sản phẩm của `id` đó, cập nhật hoặc xoá sản phẩm. Khi cập nhật hoặc xoá cần qua middleware.
+  ***
 **File:** routes/orderRoutes.js
 - Thêm thư viện express
 - Thêm các `controller (addOrderItems, updateOrderToPaid, getOrderByID, getMyOrders, getOrders, updateOrderToDelivered)` từ `controller/orderController.js`
 -  Định nghĩa router
+***
 **File:** routes/userRoutes.js
 - Thêm thư viện express
 - Thêm controller
 - Thêm middleware
 - Định nghĩa router
+***
 **File:** routes/uploadtRoutes.js
 - Sử dụng biến `path`
 - Thêm thư viện express
