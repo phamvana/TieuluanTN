@@ -7,14 +7,14 @@
 
 ---
 
-[Báo cáo Tiểu luận](https://docs.google.com/document/d/1pBuecpWnVnyw-nnBTALrKOULtWCm_6oPJgoiKN2oVRI/edit?usp=sharing)
-[Xem hướng dẫn chạy dự án](huongdan.md)
+## Báo cáo và hướng dẫn chạy dự án
+
+- [Báo cáo Tiểu luận](https://docs.google.com/document/d/1pBuecpWnVnyw-nnBTALrKOULtWCm_6oPJgoiKN2oVRI/edit?usp=sharing)
+- [Xem hướng dẫn chạy dự án](huongdan.md)
 
 ## CẬP NHẬT NHẬT KÝ THỰC HIỆN CODE
 
----
-
-## _20/3/2024 - Tìm hiểu về biến môi trường_
+### _20/3/2024 - Tìm hiểu về biến môi trường_
 
 - Khi sử sụng máy tính tại nhà để clone dữ liệu về thì app không chạy do lỗi biến môi trường không cập nhật được đường dẫn của MongoDB. Để nắm sâu hơn về biến môi trường tôi phải tự tìm hiểu.
 - 1. Tạo file .env lưu các biến cần thiết
