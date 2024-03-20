@@ -1,35 +1,39 @@
 const products = [{
     name: "Sofa góc phải Poppy hiện đại vải LDN",
     image: "/images/SOFA-3-CHO-OSAKA-MAU-1-VAI-29.jpg",
-    description: "Các sản phẩm nội thất tại Nhà Xinh đa số đều được sản xuất tại nhà máy của công ty cổ phần xây dựng kiến trúc AA với đội ngũ nhân viên và công nhân ưu tú cùng cơ sở vật chất hiện đại (http://www.aacorporation.com/). Nhà Xinh đã kiểm tra kỹ lưỡng từ nguồn nguyên liệu cho đến sản phẩm hoàn thiện cuối cùng.",
-    category: "Sofa",
-    price: 3300000,
-    countInStock: 30,
-    rating: 4,
+    description:
+        "Dịch vụ chính yếu tại Studio Như là Ảnh thẻ. Sản phẩm ảnh thẻ phục vụ cho học sinh, sinh viên, nhân viên ... cập nhật hồ sơ nhân viên, học sinh, bằng lái xe, Visa ...",
+    category: "Ảnh thẻ",
+    price: 40000,
+    countInStock: 10,
+    rating: 5,
     numReviews: 20,
 }, {
-    name: "Sofa 3 chỗ Osaka mẫu 1 vải 65",
+    name: "Phục hồi ảnh cũ",
     image: "/images/SOFA-3-CHO-OSAKA-MAU-1-VAI-46-768x511.jpg",
-    description: "Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life",
-    category: "Sofa",
-    price: 599000,
-    countInStock: 200,
+    description:
+        "Dịch vụ phục hồi ảnh cho nhu cầu ảnh thờ, Dịch vụ kèm với khung ảnh các loại.",
+    category: "Phục hồi ảnh",
+    price: 400000,
+    countInStock: 20,
     rating: 5,
     numReviews: 10,
 }, {
-    name: "Cannon EOS 80D DSLR Camera",
+    name: "Ảnh sự kiện",
     image: "/images/sofa-may-khung-go-may-dan-tu-nhien-dem-boc-da-mushroom-96219-768x511.jpg",
-    description: "Sofa Mây 2.5 chỗ mang kiểu dáng thanh lịch, hiện đại với kết cấu bằng khung gỗ và chất liệu mây tự nhiên 2 lớp. Phần đệm ngồi bằng da có thể tách rời. Các chi tiết được hoàn thiện với màu sắc trầm nhẹ nhàng và nhấn nhá kim loại đồng tinh tế. Sofa Mây có nhiều màu sắc khác nhau để chọn lựa phù hợp không gian phòng khách của bạn.",
-    category: "Sofa",
-    price: 929.99,
+    description:
+        "Dịch vụ Ảnh phục vụ cho các sự kiện như đám cưới, meeting, marathon ... Tại Studio Như chụp, chỉnh sử theo nhu cầu của khách hàng",
+    category: "Ảnh sự kiện",
+    price: 2000000,
     countInStock: 5,
     rating: 3,
     numReviews: 12,
 }, {
-    name: "Bàn ăn Peak hiện đại mặt Ceramic vân mây",
+    name: "Khung ảnh",
     image: "/images/ban-an-peak-van-may-hien-dai-ceramic-768x511.jpg",
-    description: "Bàn ăn gỗ Pio được yêu thích với mặt bàn được làm từ chất liệu melamine marble màu trắng sang trọng cùng những vân đá độc đáo. Thiết kế dạng oval và phần chân thọn gọn giúp tiết kiệm không gian phòng ăn. Bàn ăn Pio là lựa chọn tối ưu cho những không gian phòng ăn mang đậm phong cách Bắc Âu.",
-    category: "Bàn ăn",
+    description:
+        "Sản phẩm khung ảnh với rất nhiều kích thước, mẫu đẹp để quý khách lựa chọn",
+    category: "Khung ảnh",
     price: 4000000,
     countInStock: 23,
     rating: 5,
@@ -106,6 +110,6 @@ const products = [{
     countInStock: 0,
     rating: 4,
     numReviews: 12,
-}, ];
+},];
 
 export default products;
