@@ -32,13 +32,18 @@
 - Thêm file `../models/productModel.js` sẽ tìm hiểu mục models
 - Tạo các controller cho ứng dụng
   - 1. getProducts
+
+| STT | Tên | Loại | Chức năng |
+|:----|:----|:-----|:----------|
+| 1 | pageSize | biến | kích thức trang, giá trị = 8 |
+| 2 | page | biến | Number(req.query.pageNumber) || 1 |
   - 2. getProductById
   - 3. getTopProducts
   - 4. deleteProduct
   - 5. createProduct
   - 6. updateProduct
   - 7. createProductReview
-       **Lưu ý:** Có một số controller phát triển để người dùng bình thường sử dụng, có một số controller phát triển cho đối tượng quản lý xử dụng.
+**Lưu ý:** Có một số controller phát triển để người dùng bình thường sử dụng, có một số controller phát triển cho đối tượng quản lý xử dụng.
 
 ---
 
