@@ -1,10 +1,12 @@
-import e from "express";
-import asyncHandler from "express-async-handler";
-import User from "../models/userModel.js";
-import generate from "../utils/generateToken.js";
+import express from "express"; // Thư viện express 
+import asyncHandler from "express-async-handler";  // Thư viện đồng bộ của express
+import User from "../models/userModel.js"; // thêm file userModel.js
+import generate from "../utils/generateToken.js"; //thêm file generateToken.js 
 
-// validation user && GET token
-//POST /api/users/login
+/**
+ * validation user && GET token
+ * POST /api/users/login 
+ */
 const authUser = asyncHandler(async(req, res) => {
     const {
         email,
@@ -23,12 +25,15 @@ const authUser = asyncHandler(async(req, res) => {
         });
     } else {
         res.status(401);
-        throw new Error("invalid email or password");
+        throw new Error("Invalid email or password | Sai email hoặc mật khẩu!");
     }
 });
 
-// register user
-//POST /api/users
+/**
+ * register user
+ * POST /api/users 
+ * 
+ */
 const registerUser = asyncHandler(async(req, res) => {
     const {
         email,
@@ -60,12 +65,13 @@ const registerUser = asyncHandler(async(req, res) => {
         });
     } else {
         res.stutus(400);
-        throw new Error("Invalid user ID");
+        throw new Error("Invalid user ID | Không tồn tại user ID");
     }
 });
-
-//GET  user && GET token
-//GET /api/users/profile
+ /**
+  * GET  user && GET token
+  * GET /api/users/profile
+  */
 const getUserProfile = asyncHandler(async(req, res) => {
     const user = await User.findById(req.user._id);
     if (user) {
@@ -77,12 +83,14 @@ const getUserProfile = asyncHandler(async(req, res) => {
         });
     } else {
         res.status(404);
-        throw new Error("Invalid email or password");
+        throw new Error("Invalid email or password | Sai email hoặc mật khẩu!");
     }
 });
 
-//update  user && GET token
-//PUT /api/users/profile
+/**
+ * update  user && GET token
+ * PUT /api/users/profile
+ */
 const updateUserProfile = asyncHandler(async(req, res) => {
     const user = await User.findById(req.user._id);
     if (user) {
@@ -102,49 +110,59 @@ const updateUserProfile = asyncHandler(async(req, res) => {
         });
     } else {
         res.status(404);
-        throw new Error("User not found");
+        throw new Error("User not found | Không tìm thấy thành viên!");
     }
 });
 
-//ADMIN
-//GET  all user
-//GET /api/users
+/**
+ * ADMIN
+ * GET  all user
+ * GET /api/users  
+ */
 const getUsers = asyncHandler(async(req, res) => {
     const users = await User.find();
     res.json(users);
 });
 
-//ADMIN
-//DELETE  user
-//DELETE /api/users/:id
+/**
+ * ADMIN
+ * DELETE  user 
+ * DELETE /api/users/:id
+ */
 const deleteUser = asyncHandler(async(req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
         await user.remove();
         res.json({
-            message: "User removed",
+            message: "User removed | Thành viên đã được xoá!",
         });
     } else {
         res.status(404);
-        throw new Error("User not found");
+        throw new Error("User not found | Không tìm thấy thành viên!");
     }
 });
 
-//ADMIN
-//GET  user by id
-//GET /api/users/:id
+/**
+ * ADMIN
+ * GET  user by id
+ * //GET /api/users/:id
+ */
 const getUserById = asyncHandler(async(req, res) => {
     const user = await User.findById(req.params.id).select("-password");
     if (user) {
         res.json(user);
     } else {
         res.status(404);
-        throw new Error("User not found");
+        throw new Error("User not found | Không tìm thấy thành viên!");
     }
 });
 
-//ADMIN update  user
-//PUT /api/users/:id
+/**
+ * ADMIN update  user
+ * PUT /api/users/:id
+ */
+
+
 const updateUser = asyncHandler(async(req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {

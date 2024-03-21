@@ -33,12 +33,19 @@ const getProducts = asyncHandler(async (req, res) => {
 //GET product by ID
 // GET /api/products/:id
 const getProductById = asyncHandler(async (req, res) => {
+  /**
+   * sản phẩm = tìm kiếm bằng Id của MongoDB
+   */
   const product = await Product.findById(req.params.id);
+  /**
+   * Nếu tìm thấy sản phẩm thì trả về json sản phẩm đó
+   * Ngược lại thì báo lỗi cho người dùng.
+   */
   if (product) {
     res.json(product);
   } else {
     res.status(404);
-    throw new Error("Product not found");
+    throw new Error("Product not found | Không tìm thấy sản phẩm");
   }
 });
 
@@ -47,7 +54,7 @@ const getProductById = asyncHandler(async (req, res) => {
 //DELETE /api/products/:id
 const deleteProduct = asyncHandler(async (req, res) => {
   const product = await Product.findById(req.params.id);
-  console.log(req.params.id);
+  // console.log(req.params.id);
   if (product) {
     await product.remove();
     res.json({
@@ -55,7 +62,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(404);
-    throw new Error("Product not found");
+    throw new Error("Product not found | Không tìm thấy sản phẩm");
   }
 });
 
@@ -98,10 +105,13 @@ const updateProduct = asyncHandler(async (req, res) => {
     res.status(201).json(updatedProduct);
   } else {
     res.status(404);
-    throw new Error("Product not found");
+    throw new Error("Product not found | Sản phẩm không tìm thấy");
   }
 });
 
+/**
+ * tạo đánh giá sản phẩm
+ */
 const createProductReview = asyncHandler(async (req, res) => {
   const { rating, comment } = req.body;
 
@@ -141,6 +151,10 @@ const createProductReview = asyncHandler(async (req, res) => {
     throw new Error("Product not found");
   }
 });
+
+/**
+ * Trả về sản phẩm có đánh giá cao, giới hạng 5 sản phẩm
+ */
 const getTopProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({})
     .sort({
