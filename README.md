@@ -32,13 +32,15 @@
 - Thêm file `../models/productModel.js` sẽ tìm hiểu mục models
 - Tạo các controller cho ứng dụng
   - getProducts
-    **Các giá trị tính toán**
+
+    - **Các giá trị tính toán**
     - 1. pageSize: kích thước trang có thể chứa số sản phẩm, gán 8.
     - 2. page: trang được lấy từ số trang hoặc 1.
     - 3. keyword
     - 4. count: số sản phẩm
     - 5. products: danh sách sản phẩm trong dữ liệu
-    **Giá trị trả về cho client (res) là json**
+    
+    - **Giá trị trả về cho client (res) là json**
     - 1. products: danh sách sản phẩm trong dữ liệu
     - 2. page: trang
     - 3. pages: tổng số trang
