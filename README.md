@@ -33,6 +33,7 @@
 - Tạo các controller cho ứng dụng
   - getProducts
   _Các giá trị tính toán_
+
 | STT | Tên | Loại | Chức năng | Giá trị |
 |:----|:----|:-----|:----------|: -------|
 | 1 | pageSize | variable | kích thức trang | 8 |
@@ -40,6 +41,7 @@
 | 3 | keyword | variable | **tìm hiểu thêm** |`req.query.keyword` |
 | 4 | count | variable | số lượng sản phẩm |`Product.countDocuments({ ...keyword })` |
 | 5 | products | variable | danh sách sản phẩm |`Product.find({ ...keyword })`|
+ 
   _Giá trị trả về cho client (res) là json_
      
   - 2. getProductById
