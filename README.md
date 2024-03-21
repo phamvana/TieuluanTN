@@ -36,7 +36,10 @@
 | STT | Tên | Loại | Chức năng |
 |:----|:----|:-----|:----------|
 | 1 | pageSize | biến | kích thức trang, giá trị = 8 |
-| 2 | page | biến | Number(req.query.pageNumber) || 1 |
+| 2 | page | biến | `Number(req.query.pageNumber) || 1` |
+| 3 | keyword | biến | req.query.keyword |
+| 4 | count | biến |`Product.countDocuments({ ...keyword })` |
+| 5 | products | biến | `Product.find({ ...keyword })`|
   - 2. getProductById
   - 3. getTopProducts
   - 4. deleteProduct
