@@ -1,4 +1,8 @@
+/**
+ * Thư viện express-async-handler
+ */
 import asyncHandler from "express-async-handler";
+
 import Product from "../models/productModel.js";
 
 //GET all products - Tất cả các sản phẩm

@@ -27,6 +27,8 @@
 **File:** controller/productController.js
 
 - Thêm thư viện `express-async-handler`
+  - [Tài liệu](https://www.npmjs.com/package/express-async-handler)
+  - Thư viện này xử lý đồng bộ.
 - Thêm file `../models/productModel.js` sẽ tìm hiểu mục models
 - Tạo các controller cho ứng dụng
   - 1. getProducts
@@ -36,8 +38,10 @@
   - 5. createProduct
   - 6. updateProduct
   - 7. createProductReview
-**Lưu ý:** Có một số controller phát triển để người dùng bình thường sử dụng, có một số controller phát triển cho đối tượng quản lý xử dụng.
-***
+       **Lưu ý:** Có một số controller phát triển để người dùng bình thường sử dụng, có một số controller phát triển cho đối tượng quản lý xử dụng.
+
+---
+
 ### _21/3/2024 - Tiếp tục tìm hiểu hoạt động của rote_
 
 **File:** routes/uploadtRoutes.js
@@ -59,12 +63,12 @@
   - 2. định nghĩa extname
   - 3. định nghĩa mimetype
   - 4. Điều kiện kiểm tra tập tin. Nếu thoả đồng thời extname và mimetype thì trả về kết quả hàm cb(null,true) ngược lại trả về thông báo "Chỉ cho phép file hình ảnh"
-- Định nghĩa biến upload gán bằng  hàm multer() có thám số storage, fileFilter
+- Định nghĩa biến upload gán bằng hàm multer() có thám số storage, fileFilter
 - Định nghĩa router
 
-| STT | Tên route | Phương thức | Middlewar | controller | Chức năng                |
-| :-- | :-------- | :---------- | :-------- | :--------- | :----------------------- |
-| 1   | /         | POST        | upload.single("image")    |            | Upload file lên ứng dụng |
+| STT | Tên route | Phương thức | Middlewar              | controller | Chức năng                |
+| :-- | :-------- | :---------- | :--------------------- | :--------- | :----------------------- |
+| 1   | /         | POST        | upload.single("image") |            | Upload file lên ứng dụng |
 
 ---
 
