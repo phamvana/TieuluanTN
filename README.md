@@ -42,6 +42,17 @@
 - Thêm các controller
 - Thêm middleware
 - Định nghĩa route
+  _Thay đổi thành định dạng bảng_
+  | STT | Tên route | Phương thức | Middlewar | controller | Chức năng |
+  | :-- | :----------- | :---------- | :------------- | :--------------------- | :------------------------------ |
+  | 1 | / | GET | | getProducts | Trả về toàn bộ sản phẩm trong bảng dữ liệu |
+  | 2 | / | POST | protect, admin | createProduct | Tạo mới sản phẩm |
+  | 3 | /:id/reviews | POST | protect | createProductReview | **Tìm hiểu thêm từ controller** |
+  | 4 | /top | GET | | getTopProducts | Trả về sản phẩm có top |
+  | 5 | /:id | GET | | getProductById | Trả về 1 sản phẩm có `:id` |
+  | 6 | /:id | DELETE | protect, admin | deleteProduct | Xoá sản phẩm theo `:id` |
+  | 7 | /:id | PUT | protect, admin | updateProduct | Cập nhật sản phẩm theo `:id` |
+
   - 1. `router.route("/").get(getProducts)` phương thức GET lấy `controller getProducts`. Phương thức này trả về toàn bộ products của dữ liệu. Sẽ tìm hiểu phần này trong controller. url: http://localhost:5000/api/products (PORT có thể thay đổi tuỳ theo cài đặt)
   - 2. `router.route("/").post(protect, admin, createProduct);` phương thức POST để tạo sản phẩm mới. Sử dụng `middleware protect, admin` và `controller createProduct`. Dùng Postman để kiểm tra
   - 3. `router.route("/:id/reviews").post(protect, createProductReview);` phương thức POST, phương thức sử dụng `middleware protect`
