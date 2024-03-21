@@ -34,19 +34,14 @@
   - getProducts
 
   _Các giá trị tính toán_
-  
+
 | STT | Tên  | Loại | giá trị             | controller | Chức năng                |
 | :-- | :-------- | :---------- | :--------------------- | :--------- | :----------------------- |
-| 1   | /         | POST        | upload.single("image") |            | Upload file lên ứng dụng |
-
-
-  | STT | Tên | Loại | Chức năng | Giá trị |
-  |:----|:----|:-----|:----------|: -------|
-  | 1   | pageSize | variable | kích thức trang | 8 |
-  | 2 | page | variable | số trang sản phẩm | `Number(req.query.pageNumber) or 1` |
-  | 3 | keyword | variable | **tìm hiểu thêm** | `req.query.keyword` |
-  | 4 | count | variable | số lượng sản phẩm | `Product.countDocuments({ ...keyword })` |
-  | 5 | products | variable | danh sách sản phẩm | `Product.find({ ...keyword })` |
+| 1   | pageSize         | variable        |  |            |  |
+| 2 | page | variable | số trang sản phẩm | `Number(req.query.pageNumber) or 1` | |
+| 3 | keyword | variable | **tìm hiểu thêm** | `req.query.keyword` | |
+| 4 | count | variable | số lượng sản phẩm | `Product.countDocuments({ ...keyword })` | |
+| 5 | products | variable | danh sách sản phẩm | `Product.find({ ...keyword })` | |
  
   _Giá trị trả về cho client (res) là json_
      
