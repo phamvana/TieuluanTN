@@ -12,7 +12,7 @@ import {
     getUserById,
     updateUser,
 } from "../controller/userController.js";
- 
+
 /**
   * Thêm các middleware
   */

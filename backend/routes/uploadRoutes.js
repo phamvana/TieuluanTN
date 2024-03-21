@@ -1,8 +1,22 @@
+/**
+ * Thêm thư viện 
+ * path
+ * express
+ * multer
+ * 
+ */
 import path from "path";
 import express from "express";
 import multer from "multer";
+
+/**
+ * Phương thức Router của express
+ */
 const router = express.Router();
 
+/**
+ * Định nghĩa biến storage
+ */
 const storage = multer.diskStorage({
     destination(req, file, cb) {
         cb(null, "uploads/");
@@ -15,6 +29,9 @@ const storage = multer.diskStorage({
     },
 });
 
+/**
+ * Hàm checkFileType 
+ */
 function checkFileType(file, cb) {
     const filetypes = /jpg|jpeg|png/;
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
@@ -27,13 +44,19 @@ function checkFileType(file, cb) {
     }
 }
 
+/**
+ * Biến upload 
+ */
 const upload = multer({
     storage,
-    fileFilter: function(req, file, cb) {
+    fileFilter: function (req, file, cb) {
         checkFileType(file, cb);
     },
 });
 
+/**
+ * Định nghĩa router
+ */
 router.post("/", upload.single("image"), (req, res) => {
     res.send(`/${req.file.path}`);
     // res.send(`/${req.file.path.replace(/\\/g, "/")}`)
