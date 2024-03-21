@@ -23,11 +23,14 @@
 - Thêm thư viện express
 - Thêm các `controller (addOrderItems, updateOrderToPaid, getOrderByID, getMyOrders, getOrders, updateOrderToDelivered)` từ `controller/orderController.js`
 - Định nghĩa router
-  |STT | Tên route | Phương thức | Middlewar | controller | Ghi chú |
-  |:---|:----------|:------------|:----------|:-----------|:--------|
-  | 1 | / | POST | protect | addOrderItems | |
-- 1. router `router.route("/").post(protect, addOrderItems).` phương thức POST, middleware protect, controller: addOrderItems thêm đặt hàng,
-- 2. router `router.route("/").get(protect, admin, getOrders)` phương thức POST, middleware: (protect, admin), controller: getOrders
+
+| STT | Tên route    | Phương thức | Middlewar      | controller             | Chức năng                       |
+| :-- | :----------- | :---------- | :------------- | :--------------------- | :------------------------------ |
+| 1   | /            | POST        | protect        | addOrderItems          | Thêm đặt hàng                   |
+| 2   | /            | GET         | protect, admin | getOrders              | Thông tin đơn hàng              |
+| 3   | myorders     | GET         | protect        | getOrderByID           | Thông tin một đơn hàng          |
+| 4   | /:id/pay     | PUT         | protect        | updateOrderToPaid      | **Tìm hiểu thêm chức năng này** |
+| 5   | /:id/deliver | PUT         | protect, admin | updateOrderToDelivered | **Tìm hiểu thêm chức năng này** |
 
 ---
 
