@@ -24,8 +24,19 @@
 - Thêm thư viện express
 - Thêm thư viện multer
   **(Tìm hiểu về thư viện này)**
+  - 1. [Tài liệu](https://www.npmjs.com/package/multer)
+  - 2. [Video hướng dẫn](https://youtu.be/huNB4wSxPqg)
+  - 3. **Công dụng:** Ghi file vào thư mục đã chỉ định.
 - Phương thức Router của express
 - Định nghĩa biến storage.
+  - 1. Dùng thư viện multer, hàm diskStorage()
+  - 2. Thực hiện hàm destination(req, file, cb) với các tham số req, file, cb. Trong đó cb là hàm có 2 tham số null, upload/
+  - 3. Thực hiện hàm filename(req, file, cb). Trong đó cb(null, tên file)
+- Hàm kiểm tra loại file được upload
+  - 1. Định nghĩa loại file
+  - 2. định nghĩa extname
+  - 3. định nghĩa mimetype
+  - 4. Điều kiện kiểm tra tập tin. Nếu thoả đồng thời extname và mimetype thì trả về kết quả hàm cb(null,true) ngược lại trả về thông báo "Chỉ cho phép file hình ảnh"
 - Định nghĩa router
 
 | STT | Tên route | Phương thức | Middlewar | controller | Chức năng                |
