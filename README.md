@@ -32,7 +32,9 @@
 - Thêm file `../models/productModel.js` sẽ tìm hiểu mục models
 - Tạo các controller cho ứng dụng
   - getProducts
+
   _Các giá trị tính toán_
+  
 | STT | Tên  | Loại | giá trị             | controller | Chức năng                |
 | :-- | :-------- | :---------- | :--------------------- | :--------- | :----------------------- |
 | 1   | /         | POST        | upload.single("image") |            | Upload file lên ứng dụng |
