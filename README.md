@@ -31,15 +31,17 @@
   - Thư viện này xử lý đồng bộ.
 - Thêm file `../models/productModel.js` sẽ tìm hiểu mục models
 - Tạo các controller cho ứng dụng
-  - 1. getProducts
-
-| STT | Tên | Loại | Chức năng |
-|:----|:----|:-----|:----------|
-| 1 | pageSize | biến | kích thức trang, giá trị = 8 |
-| 2 | page | biến | `Number(req.query.pageNumber) || 1` |
-| 3 | keyword | biến | req.query.keyword |
-| 4 | count | biến |`Product.countDocuments({ ...keyword })` |
-| 5 | products | biến | `Product.find({ ...keyword })`|
+  - getProducts
+  _Các giá trị tính toán_
+| STT | Tên | Loại | Chức năng | Giá trị |
+|:----|:----|:-----|:----------|: -------|
+| 1 | pageSize | variable | kích thức trang | 8 |
+| 2 | page | variable | số trang sản phẩm |`Number(req.query.pageNumber) or 1` |
+| 3 | keyword | variable | **tìm hiểu thêm** |`req.query.keyword` |
+| 4 | count | variable | số lượng sản phẩm |`Product.countDocuments({ ...keyword })` |
+| 5 | products | variable | danh sách sản phẩm |`Product.find({ ...keyword })`|
+  _Giá trị trả về cho client (res) là json_
+     
   - 2. getProductById
   - 3. getTopProducts
   - 4. deleteProduct
