@@ -19,16 +19,22 @@
 ### _21/3/2024 - Tiếp tục tìm hiểu hoạt động của rote_
 
 **File:** routes/orderRoutes.js
+
 - Thêm thư viện express
 - Thêm các `controller (addOrderItems, updateOrderToPaid, getOrderByID, getMyOrders, getOrders, updateOrderToDelivered)` từ `controller/orderController.js`
--  Định nghĩa router
-  - 1. router `router.route("/").post(protect, addOrderItems).` phương thức POST, middleware protect, controller: addOrderItems thêm đặt hàng, 
-  - 2. router `router.route("/").get(protect, admin, getOrders)` phương thức POST, middleware: (protect, admin), controller: getOrders
+- Định nghĩa router
+  |STT | Tên route | Phương thức | Middlewar | controller | Ghi chú |
+  |:---|:----------|:------------|:----------|:-----------|:--------|
+  | 1 | / | POST | protect | addOrderItems | |
+- 1. router `router.route("/").post(protect, addOrderItems).` phương thức POST, middleware protect, controller: addOrderItems thêm đặt hàng,
+- 2. router `router.route("/").get(protect, admin, getOrders)` phương thức POST, middleware: (protect, admin), controller: getOrders
 
-***
+---
+
 ### _20/3/2024 - Tìm hiểu hoạt động của ruote_
 
 **File:** routes/productRoutes.js
+
 - Thêm thư viện express
 - Thêm các controller
 - Thêm middleware
@@ -38,29 +44,41 @@
   - 3. `router.route("/:id/reviews").post(protect, createProductReview);` phương thức POST, phương thức sử dụng `middleware protect`
   - 4. `router.get("/top", getTopProducts);` phương thức GET lấy giá trị top từ `controller getTopProducts`. url: http://localhost:5000/api/products/top
   - 5. Các route có tham số `id` của sản phẩm. Xem 1 sản phẩm của `id` đó, cập nhật hoặc xoá sản phẩm. Khi cập nhật hoặc xoá cần qua middleware.
-***
+
+---
+
 **File:** routes/orderRoutes.js
+
 - Thêm thư viện express
 - Thêm các `controller (addOrderItems, updateOrderToPaid, getOrderByID, getMyOrders, getOrders, updateOrderToDelivered)` từ `controller/orderController.js`
--  Định nghĩa router
-***
+- Định nghĩa router
+
+---
+
 **File:** routes/userRoutes.js
+
 - Thêm thư viện express
 - Thêm controller
 - Thêm middleware
 - Định nghĩa router
-***
+
+---
+
 **File:** routes/uploadtRoutes.js
+
 - Sử dụng biến `path`
 - Thêm thư viện express
 - Thêm thư viện multer **(Tìm hiểu về thư viện này)**
 - Phương thức Router của express
 - **(Tiêp tục tìm hiểu)**
-***
+
+---
+
 ### _20/3/2024 - Kết nối với dữ liệu MongoDB_
 
 **File:** `config/db.js`
-- Thêm thư viện mongoose. 
+
+- Thêm thư viện mongoose.
 - Thư viện được cài đặt bằng lệnh `npm i mongoose`
 - [Tham khảo tại trang](https://www.npmjs.com/package/mongoose)
 - Sử dụng `async\await` để kết nối MongoDB từ biến môi trường `.env`
@@ -68,11 +86,15 @@
 - Cách kết nối MongoDB với tài khoản trên MongoDB Cloud như hình
 
 ![Hình 1](backend/config/1.jpg)
-***
+
+---
+
 ![Hình 2](backend/config/2.jpg)
 
-- **Chú ý:** Kết nối không thành công thì xem lại biến môi trường, hoặc điều chỉnh IP của Cloud MongoDB. 
+- **Chú ý:** Kết nối không thành công thì xem lại biến môi trường, hoặc điều chỉnh IP của Cloud MongoDB.
+
 ---
+
 ### _20/3/2024 - Tìm hiểu về biến môi trường_
 
 - Khi sử sụng máy tính tại nhà để clone dữ liệu về thì app không chạy do lỗi biến môi trường không cập nhật được đường dẫn của MongoDB. Để nắm sâu hơn về biến môi trường tôi phải tự tìm hiểu.
