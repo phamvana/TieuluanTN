@@ -16,17 +16,50 @@
 
 **Nhật ký sẽ cập nhật theo ngày gần nhất, từ trên xuống dưới.**
 
+### _22/3/2024 Tiếp tục cập nhật controller_
+
+**File:** controller/orderController.js
+
+- Thêm thư viện `express-async-handler`
+- Thêm file `../models/orderModel.js`
+- Tạo các controller
+
+  - 1. addOrderItems
+    - Đặt tên biến ` addOrderItems = asyncHandler(async (req, res) ...  = req.body`
+    - Nếu `orderItems && orderItems.length === 0` thì báo lỗi
+    - Ngược lại thì cập nhật `const createdOrder = await order.save(); res.status(201).json(createdOrder);`
+  - 2. getOrderByID
+    - Đặt tên biến `const order = await Order.findById(req.params.id).populate("user", "name email");` lấy thông tin đơn hàng theo `user và name email`
+    - Nếu điều kiện đúng (order) thì trả về json `res.json(order);` ngược lại thì báo lỗi.
+  - 3. updateOrderToPaid: cập nhật đơn đặt hàng
+    - Đặt tên biến `const order = await Order.findById(req.params.id);` tìm đơn hàng theo `id`.
+    - Nếu tìm thấy (điều kiện đúng) thì `order.isPaid = true; order.paidAt = Date.now(); ... const updatedOrder = await order.save();` trả về client json `res.json(updatedOrder);`
+    - Ngược lại thì thông báo lỗi `res.status(404); throw new Error("Order not found | Không tìm thấy đơn hàng");`
+  - 4. updateOrderToDelivered: cập nhật đơn hàng
+    - Đặt tên biến `const order = await Order.findById(req.params.id);` tìm đơn đặt hàng bằng `id`
+    - Nếu tồn tại (điều kiện đúng) thì `order.isDelivered = true; order.deliveredAt = Date.now(); const updatedOrder = await order.save();` trả về json `res.json(updatedOrder)`
+    - Ngược lại thì thông báo lỗi `res.status(404); throw new Error("Order not found | Đơn hàng không tìm thấy");`
+  - 5. getMyOrders: xem đơn hàng của mình
+    - Đặt tên biến `const orders = await Order.find({user: req.user._id,});` tìm theo id của thành viên
+    - Kết quả trả về json `res.json(orders)`.
+  - 6. getOrders: người quản lý xem đặt hàng của thành viên
+    - Đặt tên biến `const orders = await Order.find().populate("user", "id name");` tìm theo người dùng và id.
+    - Kết quả trả về json `res.json(orders)`
+
+---
+
 ### _21/3/2024 - Tìm hiểu hoạt Controller_
 
 - [Controller là gì](https://viblo.asia/p/nodejs-bai-8-controller-LzD5dgAeljY)
-- Các `controller` được lưu trong thư mục cùng tên
+- Các file `controller` được lưu trong thư mục cùng tên
   - 1. orderController.js
   - 2. productController.js
   - 3. userController.js
 
 **File:** controller/userController.js
+
 - Thêm thư viện `express-async-handler`
-- Thêm file `../models/userModel.js` 
+- Thêm file `../models/userModel.js`
 - Thêm file `../utils/generateToken.js`
 - Tạo các controller
   - 1. authUser: xác minh tài khoản
@@ -39,7 +72,7 @@
     - Đặt tên biến `user = await User.create({name,email,password,});` nếu thoả điều kiện thì trả về json `_id: user._id, name: user.name, email: user.email, token: generate(user._id), isAdmin: user.isAdmin,` ngược lại báo lỗi.
   - 3. getUserProfile: lấy thông tin thành viên
     - Đặt tên biến `const user = await User.findById(req.user._id);`
-    - Nếu tồn tại user thì trả về json `_id: user._id, name: user.name, email: user.email, isAdmin: user.isAdmin,` 
+    - Nếu tồn tại user thì trả về json `_id: user._id, name: user.name, email: user.email, isAdmin: user.isAdmin,`
     - Ngược lại báo lỗi.
   - 4. updateUserProfile: cập nhật thông tin thành viên
     - Đặt tên biến `const user = await User.findById(req.user._id);` tìm theo `id`
@@ -57,7 +90,8 @@
     - Đặt tên biến `const user = await User.findById(req.params.id);` tìm theo `id`
     - Nếu tồn tại thì cập nhật, ngược lại thì báo lỗi.
 
-***
+---
+
 **File:** controller/productController.js
 
 - Thêm thư viện `express-async-handler`
@@ -71,7 +105,7 @@
       - 2. page: trang được lấy từ số trang hoặc 1.
       - 3. keyword
       - 4. count: số sản phẩm
-      - 5. products: danh sách sản phẩm trong dữ liệu    
+      - 5. products: danh sách sản phẩm trong dữ liệu
     - 2. **Giá trị trả về cho client (res) là json**
       - 1. products: danh sách sản phẩm trong dữ liệu
       - 2. page: trang
@@ -99,10 +133,8 @@
   - 6. updateProduct: cập nhật sản phẩm
     - 1. **Các giá trị tính toán**
     - 2. **Giá trị trả về cho client (res)**
-  - 7. createProductReview: tạo đánh giá sản phẩm
-    - 1. **Các giá trị tính toán**
-    - 2. **Giá trị trả về cho client (res)**
-**Lưu ý:** Có một số controller phát triển để người dùng bình thường sử dụng, có một số controller phát triển cho đối tượng quản lý xử dụng.
+  - 7. createProductReview: tạo đánh giá sản phẩm - 1. **Các giá trị tính toán** - 2. **Giá trị trả về cho client (res)**
+       **Lưu ý:** Có một số controller phát triển để người dùng bình thường sử dụng, có một số controller phát triển cho đối tượng quản lý xử dụng.
 
 ---
 
