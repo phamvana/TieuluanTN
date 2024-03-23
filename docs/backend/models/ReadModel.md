@@ -24,16 +24,22 @@ Trong model có 3 file:
    **File:** models/[productModel.js](./productModel.js)
 
    - Thêm thư viện mongoose vào `import mongoose from "mongoose";`
-   - Tạo reviewSchema có cấu trúc như sau:
+   - **Tạo `reviewSchema` có cấu trúc như sau:**
 
 ![reviewSchema](./picture/reviewSchema.PNG)
 
-   - Tạo `productSchema` có cấu trúc như sau
+| STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
+   |:----|:----|:-----|:-----|:---------|:----------|
+   | 1 | name | String | | * | Tên phản hồi |
+   | 2 | rating | Number | | * | Điểm của phản hồi sản phẩm |
+   | 3 | comment | String | | * | Nội dung phản hồi |
+   | 4 | user | mongoose.Schema.Types.ObjectId | | * | Thành viên |
+
+   - **Tạo `productSchema` có cấu trúc như sau**
 
 ![productSchema](./picture/productSchema.PNG)
 
-   - Tạo tên biến `const Product = mongoose.model("Product", productSchema);`
-   - Biến `Product` được xuất để các thành phần khác truy xuất đến `export default Product;`
+   
 
    Bảng diễn giải **productSchema**
 
@@ -42,8 +48,18 @@ Trong model có 3 file:
    | 1 | id | Object | *| * | Chương trình tự sinh ra mã |
    | 2 | user | `mongoose.Schema.Types.ObjectId` | | * | Liên kết đến bảng `User` |
    | 3 | name | String | | * | Tên sản phẩm |
-   
+   | 4 | image | String | | * | Hình ảnh sản phẩm |
+   | 5 | category | String | | * | Loại của sản phẩm |
+   | 6 | description | String | | * | Diễn giải chi tiết về sản phẩm |
+   | 7 | reviews | Object | reviewSchema | | Liên kết đến đối tượng `reviewSchema` đánh giá sản phẩm |
+   | 8 | rating | Number | | * | Cho điểm sản phẩm, giá trị mặc định 0. |
+   | 9 | numReviews | Number | | * | số lượng đánh giá, giá trị mặc định là 0 |
+   | 10 | price | Number | | * | Giá của sản phẩm, mặc định là 0 |
+   | 11 | countInStock | Number | | * | Số lượng trong kho, mặc định là 0 |
+   | 12 | timestamps | Datetime | | | Lưu ngày được tạo và ngày cập nhật dữ liệu |
 
+   - Tạo tên biến `const Product = mongoose.model("Product", productSchema);`
+   - Biến `Product` được xuất để các thành phần khác truy xuất đến `export default Product;`
 ***
    **File:** models/userModel.js
    
