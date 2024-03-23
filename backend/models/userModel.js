@@ -1,7 +1,14 @@
+/**
+ * Thêm thư viện
+ */
 import mongoose from "mongoose";
 
 import bcrypt from "bcryptjs";
 
+/**
+ * userSchema 
+ *  
+ */
 const userSchema = mongoose.Schema({
     name: {
         type: String,
