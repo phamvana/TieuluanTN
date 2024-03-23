@@ -16,20 +16,24 @@
 
 **Nhật ký sẽ cập nhật theo ngày gần nhất, từ trên xuống dưới.**
 
+### _24/3/2024_
+
+File Reame.md khi thực hiện đã quá lớn, khó theo dõi nên tôi đã chia theo cấu trúc của dự án. Mỗi thư mục nếu cần thiết sẽ có file tài liệu ghi lại những lưu ý của thư mục, tính năng và có thể là nhật ký thực hiện.
+
 ### _22/3/2024 Tìm hiểu model_
 
-Trong model có 3 file `orderModel.js; productModel.js và userModel.js` lần lược sẽ tìm hiểu ác chức năng. 
+Trong model có 3 file `orderModel.js; productModel.js và userModel.js` lần lược sẽ tìm hiểu ác chức năng.
 
 **File:** models/productModel.js
 
-- 
+- ***
 
-***
 ### _22/3/2024 Tiếp tục cập nhật controller_
 
 **Tạo route để kiểm tra các controller cần thiết**
 
-***
+---
+
 **File:** controller/orderController.js
 
 - Thêm thư viện `express-async-handler`
