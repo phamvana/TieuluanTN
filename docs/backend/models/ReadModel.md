@@ -43,8 +43,13 @@ Trong model có 3 file:
 
    ![userSchema](./picture/userSchema.PNG)
    userSchema
-   | STT | Tên | Kiểu | Bắt buộc | Diễn giải |
-   |:----|:----|:-----|:---------|:----------|
+   | STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
+   |:----|:----|:-----|:-----|:---------|:----------|
+   | 1 | id | Object | *| * | Chương trình tự sinh ra mã |
+   | 2 | name | String |   | * | Lưu tên tài khoản người dùng| 
+   | 3 | email | String |  | * | Lưu thông tin tài khoản email. Thuộc tính duy nhất |
+   | 4 | password | String | | * | Lưu mật khẩu, được mã hoá `bcryptjs` |
+   | 5 | isAdmin | Boolean | | * | Tài khoản thường hoặc là quản lý |
 4. Kết quả
 
 **Phạm Văn Á** thực hiện
