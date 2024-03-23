@@ -22,11 +22,11 @@ File Reame.md khi thực hiện đã quá lớn, khó theo dõi nên tôi đã c
 
 ### _22/3/2024 Tìm hiểu model_
 
-Trong model có 3 file `orderModel.js; productModel.js và userModel.js` lần lược sẽ tìm hiểu ác chức năng.
+[Model](backend/models/ReadModel.md)
 
-**File:** models/productModel.js
 
-- ***
+
+***
 
 ### _22/3/2024 Tiếp tục cập nhật controller_
 
