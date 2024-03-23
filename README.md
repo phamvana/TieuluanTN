@@ -26,7 +26,7 @@ Sắp xếp lại file tài liệu của dự án.
 
 ### _22/3/2024 Tìm hiểu model_
 
-[Tài liệu về Models](./docs/models/ReadModel.md)
+[Tài liệu về Models](./docs/backend/models/ReadModel.md)
 
 ***
 ### _22/3/2024 Tiếp tục cập nhật controller_
