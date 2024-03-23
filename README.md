@@ -16,8 +16,20 @@
 
 **Nhật ký sẽ cập nhật theo ngày gần nhất, từ trên xuống dưới.**
 
+### _22/3/2024 Tìm hiểu model_
+
+Trong model có 3 file `orderModel.js; productModel.js và userModel.js` lần lược sẽ tìm hiểu ác chức năng. 
+
+**File:** models/productModel.js
+
+- 
+
+***
 ### _22/3/2024 Tiếp tục cập nhật controller_
 
+**Tạo route để kiểm tra các controller cần thiết**
+
+***
 **File:** controller/orderController.js
 
 - Thêm thư viện `express-async-handler`
