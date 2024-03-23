@@ -9,11 +9,11 @@
 - Xử lý ngoại lệ xác định ứng dụng có kết nối được hay không.
 - Cách kết nối MongoDB với tài khoản trên MongoDB Cloud như hình
 
-![Hình 1](backend/config/1.jpg)
+![Hình 1](./img/1.jpg)
 
 ---
 
-![Hình 2](backend/config/2.jpg)
+![Hình 2](./img/2.jpg)
 
 - **Chú ý:** Kết nối không thành công thì xem lại biến môi trường, hoặc điều chỉnh IP của Cloud MongoDB.
 
@@ -24,3 +24,5 @@
 - 2. Cài đặt gói dotenv để chạy được biến môi trường.
 - 3. Tham khảo thêm các tài liệu về dotenv
      [https://www.npmjs.com/package/dotenv]
+
+**Phạm Văn Á** thực hiện

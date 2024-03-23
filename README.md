@@ -10,7 +10,7 @@
 ## Báo cáo và hướng dẫn chạy dự án
 
 - [Báo cáo Tiểu luận](https://docs.google.com/document/d/1pBuecpWnVnyw-nnBTALrKOULtWCm_6oPJgoiKN2oVRI/edit?usp=sharing)
-- [Xem hướng dẫn chạy dự án](huongdan.md)
+- [Xem hướng dẫn chạy dự án](./docs/huongdan.md)
 
 ## NHẬT KÝ THỰC HIỆN
 
@@ -26,14 +26,13 @@ Sắp xếp lại file tài liệu của dự án.
 
 ### _22/3/2024 Tìm hiểu model_
 
-[Models](./docs/models/ReadModel.md)
+[Tài liệu về Models](./docs/models/ReadModel.md)
 
 ***
-
 ### _22/3/2024 Tiếp tục cập nhật controller_
 
 [Tài liệu controller](./docs/backend/controller/readController.md)
-
+***
 ### _21/3/2024 - Tiếp tục tìm hiểu hoạt động của roter_
 
 [Tài liệu router](./docs/backend/router/readRouter.md)
@@ -41,7 +40,9 @@ Sắp xếp lại file tài liệu của dự án.
 ---
 ### _20/3/2024 - Kết nối với dữ liệu MongoDB_
 
+
 [Tài liệu kết nối cơ sở dữ liệu MongoDB](./docs/backend/config/readConfig.md)
+
 ---
 
 ### Tìm hiểu và cài đặt Server

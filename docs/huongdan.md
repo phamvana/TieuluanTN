@@ -15,6 +15,6 @@
 - Chạy backend `npm start`
 - Kiểm tra dự án đã hoạt động chưa.
 
-  ![Chạy dự án](uploads/image.png)
+  ![Chạy dự án](./backend/config/img/image.png)
 
   Hình thông báo đã chạy được dự án
