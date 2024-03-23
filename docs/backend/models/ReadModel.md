@@ -21,6 +21,13 @@ Trong model có 3 file:
    - Thêm thư viện mongoose vào `import mongoose from "mongoose";`
    - orderSchema tạo `user, orderItems, shippingAddress, paymentMethod, paymentResult, taxPrice, shippingPrice, totalPrice, isPaid, paidAt, isDelivered, deliveredAt, timestamps`
 
+   Bảng diễn giải 
+| STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
+|:----|:----|:-----|:-----|:---------|:----------|
+| 1 | user | `mongoose.Schema.Types.ObjectId` | | * | Tài khoản người dùng |
+
+
+***
    **File:** models/[productModel.js](./productModel.js)
 
    - Thêm thư viện mongoose vào `import mongoose from "mongoose";`
@@ -28,7 +35,7 @@ Trong model có 3 file:
 
 ![reviewSchema](./picture/reviewSchema.PNG)
 
-| STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
+   | STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
    |:----|:----|:-----|:-----|:---------|:----------|
    | 1 | name | String | | * | Tên phản hồi |
    | 2 | rating | Number | | * | Điểm của phản hồi sản phẩm |
@@ -83,7 +90,7 @@ Trong model có 3 file:
 
    - Mã hoá mật khẩu 
    
-    > `userSchema.methods.matchPassword = async function(enteredPassword) {    return await bcrypt.compare(enteredPassword, this.password);};`
+   `userSchema.methods.matchPassword = async function(enteredPassword) {    return await bcrypt.compare(enteredPassword, this.password);};`
    
    - Middlewarte xửa lý mật khẩu
    
