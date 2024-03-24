@@ -1,6 +1,8 @@
 # Tài liệu của Model
 
-   23/3/2024
+[Trở về Readme.md](../../../README.md)
+
+   (_23/3/2024_)
 1. Model là gì? 
 
    **Model** là một thần phần của mô hình MVC.
@@ -21,6 +23,7 @@ Trong model có 3 file:
    - Thêm thư viện mongoose vào `import mongoose from "mongoose";`
    - orderSchema tạo `user, orderItems, shippingAddress, paymentMethod, paymentResult, taxPrice, shippingPrice, totalPrice, isPaid, paidAt, isDelivered, deliveredAt, timestamps`
 
+   (_24/3/2024_)
    Bảng diễn giải 
 
 | STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
