@@ -22,6 +22,7 @@ Trong model có 3 file:
    - orderSchema tạo `user, orderItems, shippingAddress, paymentMethod, paymentResult, taxPrice, shippingPrice, totalPrice, isPaid, paidAt, isDelivered, deliveredAt, timestamps`
 
    Bảng diễn giải 
+
 | STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
 |:----|:----|:-----|:-----|:---------|:----------|
 | 1 | user | `mongoose.Schema.Types.ObjectId` | | * | Tài khoản người dùng |
