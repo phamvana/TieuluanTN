@@ -139,5 +139,6 @@ Bảng `shippingAddress `
    > export default user;
 
 4. Kết quả
+Sau khi phần tích cấu trúc và tính năng của Model, cần phát triển thêm tính năng nào liên quan tôi sẽ cập nhật thêm.
 
 **Phạm Văn Á** thực hiện
