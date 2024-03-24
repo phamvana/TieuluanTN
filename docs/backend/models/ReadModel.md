@@ -25,6 +25,38 @@ Trong model có 3 file:
 | STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
 |:----|:----|:-----|:-----|:---------|:----------|
 | 1 | user | `mongoose.Schema.Types.ObjectId` | | * | Tài khoản người dùng |
+| 2 | orderItems | Object | `name, qty, image, price, product` | Lưu Danh sách sản phẩm đặt hàng -  Sẽ lập trường này thành bảng riêng |
+| 3 | shippingAddress | Object | `address, street, ward, district, city` | Lưu thông tin địa chỉ giao hàng  - Sẽ lập bảng riêng cho trường dữ liệu này|
+| 4 | paymentMethod | String | | * | Lưu phương thức thanh toán đơn hàng |
+| 5 | taxPrice | Number |  | * | Lưu thông tin thuế, giá trị mặc định 0.0 |
+| 6 | shippingPrice | Number | | * | Thông tin số tiền vận chuyển -  giá trị mặc định 0.0|
+| 7 | totalPrice | Number | | * | Tổng tiền của đơn hàng, giá trị mặc định 0.0 |
+| 8 | isPaid | Boolean | | * | Thông tin thông toán |
+| 9 | paidAt | Date | | | Ngày thành toán |
+| 10 | isDelivered | Boolean | | * | Vận chuyển |
+| 11 | deliveredAt | Date | | | Ngày vận chuyển |
+| 12 | timestamps | Datetime | | | Ngày tạo, ngày cập nhật |
+
+Trong bảng trên có hai trường chứa dữ liệu `orderItems ` và `shippingAddress`. Giá trị tưng bảng như sau:
+
+Bảng `orderItems `
+| STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
+|:----|:----|:-----|:-----|:---------|:----------|
+| 1 | name | String |  | * | Tên đơn hàng |
+| 2 | qty | Number | |  | số lượng đơn hàng |
+| 3 | image | String |  | * | Địa chỉ hình ảnh đơn hàng |
+| 4 | price | Number |  | * | giá đơn hàng |
+| 5 | product | `mongoose.Schema.Types.ObjectId` | | * | Thông tin sản phẩm |
+
+Bảng `shippingAddress `
+
+| STT | Tên | Kiểu | Khoá | Bắt buộc | Diễn giải |
+|:----|:----|:-----|:-----|:---------|:----------|
+| 1 | address | String | | * | Lưu địa chỉ giao hàng |
+| 2 | street | String | | * | Lưu thông tin đường |
+| 3 | ward | String | | * | Lưu thông tin phường|
+| 4 | district | String | | * | Lưu thông tin quận|
+| 5 | city | String | | * | Lưu thông tin thành phố |
 
 
 ***
