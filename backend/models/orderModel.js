@@ -6,6 +6,7 @@ const orderSchema = mongoose.Schema({
         required: true,
         ref: "User",
     },
+
     orderItems: [{
         name: {
             type: String,
@@ -29,6 +30,7 @@ const orderSchema = mongoose.Schema({
             ref: "Product",
         },
     }, ],
+
     shippingAddress: {
         address: {
             type: String,
@@ -51,6 +53,8 @@ const orderSchema = mongoose.Schema({
             required: true,
         },
     },
+
+    
     paymentMethod: {
         type: String,
         required: true,
