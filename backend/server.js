@@ -21,7 +21,7 @@ dotenv.config(); // Sử dụng biến môi trường
 
 // Kết nối cơ sở dữ liệu MongoDB từ config/db.js
 connectDB();
-// console.log(connectDB().conn);
+
 // Sử dụng express
 const studionhu = express();
 
@@ -75,8 +75,18 @@ const PORT = process.env.PORT || 3300;
  */
 studionhu.listen(
     PORT,
+    console.clear(),
+    console.log(`|------------------------------|`.red),
     console.log(
-        `Server is on running in ${process.env.NODE_ENV} on port ${PORT}`.yellow
+        `| Tiểu luận tốt đại học !      |` .yellow
             .bold
     ),
+    console.log(`| Đề tài: WEBSITE STUDIO NHƯ ! |`
+    .red .bold
+    ),
+    console.log(`| Thực hiện: PHẠM VĂN Á        |`),
+    console.log(`| MSSV: cm21v7x306             |`),
+    console.log(`|------------------------------|`.red), 
+    console.log(`| PORT: ${PORT}                   |`),  
+    console.log(`|------------------------------|`.red),
 );

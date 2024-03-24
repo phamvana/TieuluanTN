@@ -21,7 +21,7 @@ _Tên file server.js_
   - 2. [Tài liệu](https://nodejs.org/api/path.html)
   - 3. Thực hiện các đường dẫn tĩnh của ứng dụng
 - Tìm hiểu middleware
-  - 1.  [Tài liệu](https://viblo.asia/p/tim-hieu-ve-middleware-trong-expressjs-gVQelwaaGZJ)
+  - 1.  [Tài liệu](https://viblo.asia/p/tim-hieu-ve-middleware-trong-expressjs-gVQelwaaGZJ)`
   - 2.  [video hướng dẫn](https://youtu.be/g4z5zwJMSuo)
   - 3.  Phần mềm trung gian để xử lý một vấn đề nào đó
   - 4.  Sử dụng middle lỗi được thêm ở thư mục `/middleware/errorMiddleware.js`. 

@@ -16,6 +16,10 @@
 
 **Nhật ký sẽ cập nhật theo ngày gần nhất, từ trên xuống dưới.**
 
+### _24/3/2024 Middleware_
+
+[Tài liệu Middleware](./docs/backend/middleware/readMiddleware.md)
+***
 ### _23/3/2024_
 
 File Reame.md khi thực hiện đã quá lớn, khó theo dõi nên tôi đã chia theo cấu trúc của dự án. Mỗi thư mục nếu cần thiết sẽ có file tài liệu ghi lại những lưu ý của thư mục, tính năng và có thể là nhật ký thực hiện.
