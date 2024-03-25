@@ -31,7 +31,12 @@ const router = express.Router();
 /**
  * Định nghĩa route với các phương thức tương ứng.
  */
-router.route("/").get(getProducts).post(protect, admin, createProduct);
+
+// router.route("/").get(getProducts).post(protect, admin, createProduct);
+/**
+ * Tạo route để kiểm tra controller
+ */
+router.route("/").get(getProducts).post(createProduct);
 router.route("/:id/reviews").post(protect, createProductReview);
 router.get("/top", getTopProducts);
 router
