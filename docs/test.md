@@ -11,3 +11,7 @@ Sử dụng web browser (công cụ trình duyệt) để kiểm tra các phươ
 3. http://localhost:3300/api/products
 4. http://localhost:3300/api/products/top
 5. http://localhost:3300/api/products/65fa4abebfd8f991ec0f5746
+
+Sử dụng POSTMAN để kiểm tra
+
+[How to Add Authorization in Postman](https://youtu.be/fzNIyCSa1BA)
