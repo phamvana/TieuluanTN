@@ -38,7 +38,7 @@ studionhu.use(express.json());
 
 //route chính
 studionhu.get("/", (req, res) => {
-    res.send("API is on running... | Trang web đã được thực thi ... ");
+    res.send("Trang web đã được thực thi ... ");
 });
 
 // Các route của chương trình
@@ -78,15 +78,15 @@ studionhu.listen(
     console.clear(),
     console.log(`|------------------------------|`.red),
     console.log(
-        `| Tiểu luận tốt đại học !      |` .yellow
+        `| Tiểu luận tốt đại học !      |`.yellow
             .bold
     ),
     console.log(`| Đề tài: WEBSITE STUDIO NHƯ ! |`
-    .red .bold
+        .red.bold
     ),
     console.log(`| Thực hiện: PHẠM VĂN Á        |`),
     console.log(`| MSSV: cm21v7x306             |`),
-    console.log(`|------------------------------|`.red), 
-    console.log(`| PORT: ${PORT}                   |`),  
+    console.log(`|------------------------------|`.red),
+    console.log(`| PORT: ${PORT}                   |`),
     console.log(`|------------------------------|`.red),
 );
