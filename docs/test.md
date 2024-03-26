@@ -12,6 +12,11 @@ Sử dụng web browser (công cụ trình duyệt) để kiểm tra các phươ
 4. http://localhost:3300/api/products/top
 5. http://localhost:3300/api/products/65fa4abebfd8f991ec0f5746
 
-Sử dụng POSTMAN để kiểm tra
+Sử dụng POSTMAN để kiểm tra hoạt động của backend
 
+1. Kiểm tra products
+2. Kiểm tra Users
+3. Kiểm tra order
+
+**Tài liệu**
 [How to Add Authorization in Postman](https://youtu.be/fzNIyCSa1BA)
