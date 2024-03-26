@@ -18,7 +18,7 @@
 
 ### _25/3/2024 Test backend_
 
-[Tài liệu kiểm thử](./docs/backend/test.md)
+[Tài liệu kiểm thử](./docs/test.md)
 
 ### _24/3/2024 Middleware_
 
