@@ -16,6 +16,10 @@
 
 **Nhật ký sẽ cập nhật theo ngày gần nhất, từ trên xuống dưới.**
 
+### _25/3/2024 Test backend_
+
+[Tài liệu kiểm thử](./docs/backend/test.md)
+
 ### _24/3/2024 Middleware_
 
 [Tài liệu Middleware](./docs/backend/middleware/readMiddleware.md)
