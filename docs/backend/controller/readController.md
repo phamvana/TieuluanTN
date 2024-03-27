@@ -79,6 +79,8 @@
 
 **File:** controller/productController.js
 
+_cập nhật ngày 28/3/2024_
+
 - Thêm thư viện `express-async-handler`
   - [Tài liệu](https://www.npmjs.com/package/express-async-handler)
   - Thư viện này xử lý đồng bộ.
@@ -95,31 +97,55 @@
       - 1. products: danh sách sản phẩm trong dữ liệu
       - 2. page: trang
       - 3. pages: tổng số trang
+
+![GETAllProducts](GetAllProducts.PNG)
+
   - 2. getProductById: Trả về giá trị 1 sản phẩm theo `id`
     - 1. **Các giá trị tính toán**
       - `const product = await Product.findById(req.params.id);`
     - 2. **Giá trị trả về cho client (res)**
       - Nếu tìm thấy thì trả về kết quả `res.json(product);`
       - Ngược lại thì gán 404 cho status và tạo hàm lỗi.
+
+![GETProductById](./GetProductById.PNG)
+
   - 3. getTopProducts: Trả về sản phẩm có đánh giá cao
     - 1. **Các giá trị tính toán**
       - products: danh sách sản phẩm. Sắp xếp sản phẩm theo rating cao nhất, giới hạn 5 sản phẩm
     - 2. **Giá trị trả về cho client (res)**
       - Trả về danh sách sản phẩm theo sắp xếp và giới hạn 5.
+
+![GetTopProduct](./GetTopProduct.PNG)
+
   - 4. deleteProduct: xoá sản phẩm dành cho nhân viên quản lý, tài khoản admin
     - 1. **Các giá trị tính toán**
       - `const product = await Product.findById(req.params.id);`
     - 2. **Giá trị trả về cho client (res)**
       - Nếu tìm thấy sp thì xoá khỏi dữ liệu và thông báo đã xoá
       - Nếu không tìm thấy thì thông báo lỗi.
+
+![CreateProduct](./AdminDeleteProduct.PNG)
+
   - 5. createProduct: tạo sản phẩm mới dành cho nhân viên quản lý, tài khoản admin
     - 1. **Các giá trị tính toán**
     - 2. **Giá trị trả về cho client (res)**
+
+![AdminCreateProduct](./AdminCreateProduct.PNG)
+
   - 6. updateProduct: cập nhật sản phẩm
     - 1. **Các giá trị tính toán**
     - 2. **Giá trị trả về cho client (res)**
-  - 7. createProductReview: tạo đánh giá sản phẩm - 1. **Các giá trị tính toán** - 2. **Giá trị trả về cho client (res)**
-       **Lưu ý:** Có một số controller phát triển để người dùng bình thường sử dụng, có một số controller phát triển cho đối tượng quản lý xử dụng.
 
+![AdminUpdateProduct](./AdminUpdateProduct.PNG)
+
+  - 7. createProductReview: tạo đánh giá sản phẩm 
+    - 1. **Các giá trị tính toán** 
+    - 2. **Giá trị trả về cho client (res)**
+    
+![CreateReviewProduct](./CreateReviewProduct.PNG)
+
+ **Lưu ý:** Có một số controller phát triển để người dùng bình thường sử dụng, có một số controller phát triển cho đối tượng quản lý xử dụng.
+
+![ExportController](./ExportController.PNG)
 ---
 **Phạm Văn Á thực hiện**

@@ -34,8 +34,11 @@ const getProducts = asyncHandler(async (req, res) => {
   });
 });
 
-//GET product by ID
-// GET /api/products/:id
+/**
+ * GET product by ID 
+ * GET /api/products/:id
+ * Phạm Văn Á thực hiện
+ */
 const getProductById = asyncHandler(async (req, res) => {
   /**
    * sản phẩm = tìm kiếm bằng Id của MongoDB
@@ -53,9 +56,13 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 });
 
-//ADMIN - quản trị dữ liệu
-//DELETE delete product
-//DELETE /api/products/:id
+
+/**
+ * ADMIN - quản trị có quyền thực hiện 
+ * DELETE delete product
+ * DELETE /api/products/:id
+ * Phạm Văn Á thực hiện
+ */
 const deleteProduct = asyncHandler(async (req, res) => {
   const product = await Product.findById(req.params.id);
   // console.log(req.params.id);
@@ -70,9 +77,13 @@ const deleteProduct = asyncHandler(async (req, res) => {
   }
 });
 
-//ADMIN
-//POST create product
-//POST /api/products/
+/**
+ * Tạo mới 1 sản phẩm
+ * ADMIN - quản trị có quyền
+ * POST create product 
+ * POST /api/products/
+ * Phạm Văn Á thực hiện 28/3/2024
+ */
 const createProduct = asyncHandler(async (req, res) => {
   const product = new Product({
     name: "sample ",
@@ -89,9 +100,12 @@ const createProduct = asyncHandler(async (req, res) => {
   res.status(201).json(createdProduct);
 });
 
-//ADMIN
-//PUT update product
-//PUT /api/products/:id
+/**
+ * ADMIN - quản trị có quyền
+ * PUT update product
+ * PUT /api/products/:id   
+ * Phạm văn Á thực hiện
+ */
 const updateProduct = asyncHandler(async (req, res) => {
   const { name, price, description, image, brand, category, countInStock } =
     req.body;
@@ -109,7 +123,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     res.status(201).json(updatedProduct);
   } else {
     res.status(404);
-    throw new Error("Product not found | Sản phẩm không tìm thấy");
+    throw new Error("Sản phẩm không tìm thấy!");
   }
 });
 
@@ -158,6 +172,9 @@ const createProductReview = asyncHandler(async (req, res) => {
 
 /**
  * Trả về sản phẩm có đánh giá cao, giới hạng 5 sản phẩm
+ * GET /api/products/top
+ * Tất cả điều có quyền xem
+ * Phạm Văn Á thực hiện
  */
 const getTopProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({})
@@ -168,6 +185,14 @@ const getTopProducts = asyncHandler(async (req, res) => {
 
   res.json(products);
 });
+
+/**
+ * Xuất các controller cho router xử dụng
+ * Trong quá trình phân tích,thiết kế
+ *  sẽ bổ sung thêm các tính năng cho ứng dụng
+ * Phạm Văn Á thực hiện
+ * Cập nhật 28/3/2024
+ */
 export {
   getProducts,
   getProductById,
