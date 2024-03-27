@@ -30,7 +30,7 @@ const authUser = asyncHandler(async(req, res) => {
 });
 
 /**
- * register user
+ * register user ==> đăng ký thành viên mới
  * POST /api/users 
  * 
  */
@@ -69,7 +69,7 @@ const registerUser = asyncHandler(async(req, res) => {
     }
 });
  /**
-  * GET  user && GET token
+  * GET  user && GET token ==> xem thông tin thành viên
   * GET /api/users/profile
   */
 const getUserProfile = asyncHandler(async(req, res) => {

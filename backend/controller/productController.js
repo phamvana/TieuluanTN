@@ -5,8 +5,11 @@ import asyncHandler from "express-async-handler";
 
 import Product from "../models/productModel.js";
 
-//GET all products - Tất cả các sản phẩm
-// GET /api/products
+/**
+ * GET all products - Tất cả các sản phẩm 
+ * GET /api/products
+ * Phạm Văn Á thực hiện
+ */
 const getProducts = asyncHandler(async (req, res) => {
   const pageSize = 8;
   const page = Number(req.query.pageNumber) || 1;

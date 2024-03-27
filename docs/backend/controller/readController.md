@@ -6,7 +6,7 @@
 **File:** controller/orderController.js
 
 - Thêm thư viện `express-async-handler`
-- Thêm file `../models/orderModel.js`
+- Thêm file `../models/orderModel.js` [tài liệu models](../models/ReadModel.md)
 - Tạo các controller
 
   - 1. addOrderItems
@@ -44,7 +44,7 @@
 **File:** controller/userController.js
 
 - Thêm thư viện `express-async-handler`
-- Thêm file `../models/userModel.js`
+- Thêm file `../models/userModel.js` [tài liệu models](../models/ReadModel.md)
 - Thêm file `../utils/generateToken.js`
 - Tạo các controller
   - 1. authUser: xác minh tài khoản
@@ -82,9 +82,9 @@
 - Thêm thư viện `express-async-handler`
   - [Tài liệu](https://www.npmjs.com/package/express-async-handler)
   - Thư viện này xử lý đồng bộ.
-- Thêm file `../models/productModel.js` sẽ tìm hiểu mục models
+- Thêm file `../models/productModel.js` [tài liệu models](../models/ReadModel.md)
 - Tạo các controller cho ứng dụng
-  - 1. getProducts: Trả về cả sản phẩm
+  - 1. getProducts: Trả về tất cả sản phẩm
     - 1. **Các giá trị tính toán**
       - 1. pageSize: kích thước trang có thể chứa số sản phẩm, gán 8.
       - 2. page: trang được lấy từ số trang hoặc 1.
