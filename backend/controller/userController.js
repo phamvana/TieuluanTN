@@ -7,7 +7,7 @@ import generate from "../utils/generateToken.js"; //thêm file generateToken.js
  * validation user && GET token
  * POST /api/users/login 
  */
-const authUser = asyncHandler(async(req, res) => {
+const authUser = asyncHandler(async (req, res) => {
     const {
         email,
         password
@@ -30,11 +30,12 @@ const authUser = asyncHandler(async(req, res) => {
 });
 
 /**
- * register user
+ * register user ==> Đăng ký thành viên mới
  * POST /api/users 
  * 
+ * Phạm Văn Á thực hiện
  */
-const registerUser = asyncHandler(async(req, res) => {
+const registerUser = asyncHandler(async (req, res) => {
     const {
         email,
         name,
@@ -64,15 +65,15 @@ const registerUser = asyncHandler(async(req, res) => {
             isAdmin: user.isAdmin,
         });
     } else {
-        res.stutus(400);
-        throw new Error("Invalid user ID | Không tồn tại user ID");
+        res.stutus(403);
+        throw new Error("Invalid user ID | user ID không đúng!");
     }
 });
- /**
-  * GET  user && GET token
-  * GET /api/users/profile
-  */
-const getUserProfile = asyncHandler(async(req, res) => {
+/**
+ * GET  user && GET token
+ * GET /api/users/profile
+ */
+const getUserProfile = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
     if (user) {
         res.json({
@@ -91,11 +92,11 @@ const getUserProfile = asyncHandler(async(req, res) => {
  * update  user && GET token
  * PUT /api/users/profile
  */
-const updateUserProfile = asyncHandler(async(req, res) => {
+const updateUserProfile = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
     if (user) {
         (user.name = req.body.name || user.name),
-        (user.email = req.body.email || user.email);
+            (user.email = req.body.email || user.email);
         if (req.body.password) {
             user.password = req.body.password;
         }
@@ -119,7 +120,7 @@ const updateUserProfile = asyncHandler(async(req, res) => {
  * GET  all user
  * GET /api/users  
  */
-const getUsers = asyncHandler(async(req, res) => {
+const getUsers = asyncHandler(async (req, res) => {
     const users = await User.find();
     res.json(users);
 });
@@ -129,7 +130,7 @@ const getUsers = asyncHandler(async(req, res) => {
  * DELETE  user 
  * DELETE /api/users/:id
  */
-const deleteUser = asyncHandler(async(req, res) => {
+const deleteUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
         await user.remove();
@@ -147,7 +148,7 @@ const deleteUser = asyncHandler(async(req, res) => {
  * GET  user by id
  * //GET /api/users/:id
  */
-const getUserById = asyncHandler(async(req, res) => {
+const getUserById = asyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id).select("-password");
     if (user) {
         res.json(user);
@@ -162,12 +163,11 @@ const getUserById = asyncHandler(async(req, res) => {
  * PUT /api/users/:id
  */
 
-
-const updateUser = asyncHandler(async(req, res) => {
+const updateUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
         (user.name = req.body.name || user.name),
-        (user.email = req.body.email || user.email);
+            (user.email = req.body.email || user.email);
         user.isAdmin = req.body.isAdmin;
         const updatedUser = await user.save();
 
