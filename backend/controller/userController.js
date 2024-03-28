@@ -30,7 +30,7 @@ const authUser = asyncHandler(async (req, res) => {
 });
 
 /**
- * register user ==> Đăng ký thành viên mới
+ * register user
  * POST /api/users 
  * 
  * Phạm Văn Á thực hiện
