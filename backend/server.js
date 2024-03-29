@@ -76,7 +76,7 @@ const PORT = process.env.PORT || 3300;
 studionhu.listen(
     PORT,
     console.clear(),
-    console.log(`|------------------------------|`.red),
+    console.log(`================================`.red),
     console.log(
         `| Tiểu luận tốt đại học !      |`.yellow
             .bold
@@ -84,9 +84,10 @@ studionhu.listen(
     console.log(`| Đề tài: WEBSITE STUDIO NHƯ ! |`
         .red.bold
     ),
+    console.log(`| Hướng dẫn: TS.LÂM NHỰT KHANG |`),
     console.log(`| Thực hiện: PHẠM VĂN Á        |`),
     console.log(`| MSSV: cm21v7x306             |`),
     console.log(`|------------------------------|`.red),
     console.log(`| PORT: ${PORT}                   |`),
-    console.log(`|------------------------------|`.red),
+    console.log(`================================`.red),
 );

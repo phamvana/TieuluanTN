@@ -10,7 +10,7 @@ const connectDB = async () => {
 
         //thông báo 
         console.log(`| Kết nối dữ liệu thành công ! |`);
-        console.log(`|------------------------------|`.red);
+        console.log(`================================`.red);
         console.log(`Morgan hoạt động ghi lại logger ...`.red);
         // console.log(
         //     `MongoDB is connected: ${conn.connection.host}`.white
