@@ -10,14 +10,17 @@ import Order from "../models/orderModel.js";
 /**
  * POST one order
  * POST /api/orders
- * 
+ * Thêm đặt hàng
+ * Cập nhật API documents D.1
+ * Thực hiện: Phạm Văn Á
+ * Ngày 29/3/2024
  */
 const addOrderItems = asyncHandler(async (req, res) => {
     const {
-        orderItems,
-        shippingAddress,
-        paymentMethod,
-        itemsPrice,
+        orderItems,         // Xem orderModel(name, qty, image, price, product)
+        shippingAddress,    // Xem orderModel(address, street, ward, district, city)
+        paymentMethod,      // Xem orderModel(type)
+        itemsPrice,         // Xem orderModel ()
         taxPrice,
         shippingPrice,
         totalPrice,

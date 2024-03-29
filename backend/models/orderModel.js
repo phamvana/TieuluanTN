@@ -1,5 +1,13 @@
 import mongoose from "mongoose";
 
+/**
+ * Công việc cần làm: Phân tích và thiết kế hệ thống Studio Như
+ * order cần lưu những thông tin 
+ * ===========================
+ * Thực hiện: Phạm Văn Á
+ * Ngày 29/3/2024
+ */
+
 const orderSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -29,7 +37,7 @@ const orderSchema = mongoose.Schema({
             required: true,
             ref: "Product",
         },
-    }, ],
+    },],
 
     shippingAddress: {
         address: {
@@ -54,7 +62,7 @@ const orderSchema = mongoose.Schema({
         },
     },
 
-    
+
     paymentMethod: {
         type: String,
         required: true,
