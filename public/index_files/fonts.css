@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'AvertaPEBold';
+    src: url('../fonts/AvertaPEBold/AvertaPEBold.eot');
+    src: url('../fonts/AvertaPEBold/AvertaPEBold.eot') format('embedded-opentype'),
+         url('../fonts/AvertaPEBold/AvertaPEBold.woff2') format('woff2'),
+         url('../fonts/AvertaPEBold/AvertaPEBold.woff') format('woff'),
+         url('../fonts/AvertaPEBold/AvertaPEBold.ttf') format('truetype'),
+         url('../fonts/AvertaPEBold/AvertaPEBold.svg#AvertaPEBold') format('svg');
+}
+@font-face {
+    font-family: 'AvertaPE';
+    src: url('../fonts/AvertaPE/AvertaPERegular.eot');
+    src: url('../fonts/AvertaPE/AvertaPERegular.eot') format('embedded-opentype'),
+         url('../fonts/AvertaPE/AvertaPERegular.woff2') format('woff2'),
+         url('../fonts/AvertaPE/AvertaPERegular.woff') format('woff'),
+         url('../fonts/AvertaPE/AvertaPERegular.ttf') format('truetype'),
+         url('../fonts/AvertaPE/AvertaPERegular.svg#AvertaPERegular') format('svg');
+}
+@font-face {
+    font-family: 'AvertaPELight';
+    src: url('../fonts/AvertaPELight/AvertaPELight.eot');
+    src: url('../fonts/AvertaPELight/AvertaPELight.eot') format('embedded-opentype'),
+         url('../fonts/AvertaPELight/AvertaPELight.woff2') format('woff2'),
+         url('../fonts/AvertaPELight/AvertaPELight.woff') format('woff'),
+         url('../fonts/AvertaPELight/AvertaPELight.ttf') format('truetype'),
+         url('../fonts/AvertaPELight/AvertaPELight.svg#AvertaPELight') format('svg');
+}
+@font-face {
+    font-family: 'AvertaPEBlack';
+    src: url('../fonts/AvertaPEBlack/AvertaPEBlack.eot');
+    src: url('../fonts/AvertaPEBlack/AvertaPEBlack.eot') format('embedded-opentype'),
+         url('../fonts/AvertaPEBlack/AvertaPEBlack.woff2') format('woff2'),
+         url('../fonts/AvertaPEBlack/AvertaPEBlack.woff') format('woff'),
+         url('../fonts/AvertaPEBlack/AvertaPEBlack.ttf') format('truetype'),
+         url('../fonts/AvertaPEBlack/AvertaPEBlack.svg#AvertaPEBlack') format('svg');
+}

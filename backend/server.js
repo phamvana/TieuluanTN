@@ -36,9 +36,14 @@ if (process.env.NODE_ENV === "development") {
 // Tạo Json
 studionhu.use(express.json());
 
+/**
+ * Tạo trang tĩnh
+ * 
+ */
+studionhu.use(express.static('public'));
 //route chính
 studionhu.get("/", (req, res) => {
-    res.send("Trang web đã được thực thi ... ");
+    res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 // Các route của chương trình
@@ -90,4 +95,9 @@ studionhu.listen(
     console.log(`|------------------------------|`.red),
     console.log(`| PORT: ${PORT}                   |`),
     console.log(`================================`.red),
+    console.log(path.resolve(__dirname, '/views/index.html')),
 );
+/**
+ * Thực hiện: PhamVanA
+ * Ngày tạo: 19/3/2024
+ */

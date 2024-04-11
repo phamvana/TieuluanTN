@@ -18,3 +18,7 @@
   ![Chạy dự án](./backend/config/img/image.png)
 
   Hình thông báo đã chạy được dự án
+
+### Tài liệu tham khảo
+
+- [Sách Nodejs, Express, MongoDB](https://drive.google.com/file/d/1Y06d4mmNTRFy9LgwraRPtwJlqpw7NYNY/view)
