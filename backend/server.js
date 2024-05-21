@@ -25,6 +25,11 @@ connectDB();
 // Sử dụng express
 const studionhu = express();
 
+/**
+ * Thư viện ejs
+ */
+import ejs from 'ejs';
+studionhu.set('view engine', 'ejs');
 /*
  * Công  cụ ghi logger trong quá trình phát triển ứng dụng
  * pva cập nhật và cài đặt trong dev
@@ -43,7 +48,8 @@ studionhu.use(express.json());
 studionhu.use(express.static('public'));
 //route chính
 studionhu.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    // res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.render('index');
 });
 
 // Các route của chương trình
@@ -89,13 +95,13 @@ studionhu.listen(
     console.log(`| Đề tài: WEBSITE STUDIO NHƯ ! |`
         .red.bold
     ),
-    console.log(`| Hướng dẫn: TS.LÂM NHỰT KHANG |`),
+    console.log(`| Hướng dẫn: TS.LÂM NHỰT KHANG |`.green),
     console.log(`| Thực hiện: PHẠM VĂN Á        |`),
     console.log(`| MSSV: cm21v7x306             |`),
     console.log(`|------------------------------|`.red),
     console.log(`| PORT: ${PORT}                   |`),
     console.log(`================================`.red),
-    console.log(path.resolve(__dirname, '/views/index.html')),
+    // console.log(path.resolve(__dirname, '/views/index.html')),
 );
 /**
  * Thực hiện: PhamVanA
